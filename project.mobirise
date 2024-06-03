@@ -27,7 +27,7 @@
         "isRoundedButtons": true,
         "isGhostButtonBorder": true,
         "underlinedLinks": false,
-        "isAnimatedOnScroll": true,
+        "isAnimatedOnScroll": false,
         "isScrollToTopButton": false
       },
       "titlePreset": "Beauty Salon",
@@ -57,7 +57,7 @@
     "versionPublish": "5.9.18",
     "screenshot": "screenshot.png",
     "favicon": false,
-    "mbrsiteDomain": "c9ehowd544",
+    "mbrsiteDomain": "rjtqvdxu4c",
     "usedWebp": true,
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
