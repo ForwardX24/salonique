@@ -53,7 +53,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 41,
+    "uniqCompNum": 43,
     "versionPublish": "5.9.18",
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -69,7 +69,7 @@
     "gdpr": false,
     "publishChangesOnly": true,
     "global_after_body": "<script>\nwindow.Futy = { key: '664f38535dcd5' };\n(function (e, t) {\n    var n = e.createElement(t);\n    n.async = true;\n    var f = window.Promise && window.fetch ? 'modern.js' : 'legacy.js';\n    n.src = 'https://v1.widget.futy.io/js/futy-widget-' + f;\n    var r = e.getElementsByTagName(t)[0];\n    r.parentNode.insertBefore(n, r);\n})(document, 'script');\n</script>",
-    "chatbutton": false
+    "chatbutton": {}
   },
   "pages": {
     "index.html": {
@@ -3090,109 +3090,6 @@
           "_anchor": "pricing1-q",
           "_isUserblock": true,
           "_cid": "ucMoz1EIrG",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "padding-top": "(@paddingTop * 1rem)",
-            "padding-bottom": "(@paddingBottom * 1rem)",
-            "& when (@bg-type = \"color\")": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = \"image\")": {
-              "background-image": "url(@bg-value)",
-              "& when (@overlay)": {
-                ".mbr-overlay": {
-                  "background": "@overlayColor",
-                  "opacity": "@overlayOpacity"
-                }
-              }
-            },
-            ".container-fluid": {
-              "padding": "0",
-              "margin": "0"
-            },
-            "h2, h3, h4, h5": {
-              "margin": "0"
-            },
-            ".mbr-section-head": {
-              "margin-bottom": "40px"
-            },
-            ".mbr-section-title": {
-              "color": "#000000",
-              "text-align": "center"
-            },
-            ".mbr-section-subtitle": {
-              "text-align": "center"
-            },
-            ".mbr-card-title": {
-              "color": "#000000",
-              "margin-bottom": "24px",
-              "& when not (@showCardSubtitle)": {
-                "margin-top": "24px"
-              }
-            },
-            ".mbr-card-subtitle": {
-              "color": "#6b6b6b",
-              "margin-top": "28px",
-              "margin-bottom": "-7px"
-            },
-            ".image-container": {
-              "display": "flex",
-              "flex-direction": "row",
-              "flex-wrap": "wrap"
-            },
-            ".image-wrap": {
-              "width": "50%",
-              "position": "relative",
-              "@media (max-width: 680px)": {
-                "width": "100%"
-              }
-            },
-            "img": {
-              "width": "100%",
-              "height": "100%",
-              "object-fit": "cover"
-            },
-            ".text-wrap": {
-              "position": "absolute",
-              "bottom": "128px",
-              "left": "0",
-              "width": "270px",
-              "min-height": "92px",
-              "padding-left": "28px",
-              "background": "@cardBg",
-              "opacity": "1",
-              "display": "flex",
-              "flex-direction": "column",
-              "justify-content": "flex-start",
-              "-webkit-clip-path": "inset(0 100% 0 0)",
-              "clip-path": "inset(0 100% 0 0)",
-              "transition": "0.7s cubic-bezier(0.16, 0.09, 0, 1.02) 0s",
-              "@media (max-width: 400px)": {
-                "bottom": "20px"
-              },
-              "& when not (@addCardBg)": {
-                "background": "transparent"
-              }
-            },
-            ".image-wrap:hover": {
-              ".text-wrap": {
-                "-webkit-clip-path": "inset(0 0 0 0)",
-                "clip-path": "inset(0 0 0 0)",
-                "opacity": "1"
-              }
-            }
-          },
-          "_name": "gallery3",
-          "_sourceTheme": "impressm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"gallery3\" group=\"Gallery & Slider\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" name=\"showTitle\" title=\"Title\" checked>\n        <input type=\"checkbox\" name=\"showSubtitle\" title=\"Subtitle\">\n        <select title=\"Image Amount\" name=\"imageAmount\">\n            <option value=\"2\">2</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"6\">6</option>\n            <option value=\"8\">8</option>\n        </select>\n        <header>Hover</header>\n        <input type=\"checkbox\" name=\"showCardTitle\" title=\"Card Title\" checked>\n        <input type=\"checkbox\" name=\"showCardSubtitle\" title=\"Card Subtitle\">\n        <input type=\"checkbox\" name=\"addCardBg\" title=\"Card Background\" checked>\n        <input type=\"color\" name=\"cardBg\" title=\"Card Color\" value=\"#ffffff\" condition=\"addCardBg\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#9ad7f1\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.1\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">\n                SUBTITLE\n            </h4>\n            <h2 class=\"mbr-section-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">BEHANDELINGEN</h2>\n        </div>\n        <div class=\"image-container\">\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 0\">\n                <img src=\"@PROJECT_PATH@/assets/images/mbr-3-1920x1280.jpeg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">MANICURE</h3>\n                </div>\n            </div>\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 1\">\n                <img src=\"@PROJECT_PATH@/assets/images/mbr-1920x1920.jpeg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">GELPOLISH</h3>\n                </div>\n            </div>\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 2\">\n                <img src=\"@PROJECT_PATH@/assets/images/302292240_510618437733851_1462375853487973418_n-1-1440x1434.jpeg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">NAILART</h3>\n                </div>\n            </div>\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 3\">\n                <img src=\"@PROJECT_PATH@/assets/images/305496848_510618441067184_4864317650626674420_n-3-1133x2015.jpeg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">GELEXTENSION</h3>\n                </div>\n            </div>\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 4\">\n                <img src=\"../_images/gallery/img13.jpg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-4\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">TITLE</h3>\n                </div>\n            </div>\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 5\">\n                <img src=\"../_images/gallery/img14.jpg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">TITLE</h3>\n                </div>\n            </div>\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 6\">\n                <img src=\"../_images/gallery/img15.jpg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">TITLE</h3>\n                </div>\n            </div>\n            <div class=\"image-wrap\" mbr-if=\"imageAmount > 7\">\n                <img src=\"../_images/gallery/img16.jpg\" alt>\n                <div class=\"text-wrap\">\n                    <h5 class=\"mbr-card-subtitle mbr-fonts-style\" data-app-selector=\".mbr-card-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showCardSubtitle\">SUBTITLE</h5>\n                    <h3 class=\"mbr-card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showCardTitle\" data-app-selector=\".mbr-card-title\">TITLE</h3>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "ucKTsBLFYo",
-          "_anchor": "gallery3-h",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
